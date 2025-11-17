@@ -1,0 +1,1139 @@
+/* ------------------- GLOBAL --------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body.warm-theme {
+  filter: sepia(0.1) brightness(1.05) contrast(0.95);
+}
+
+.Home {
+  width: 100%;
+  min-height: 110vh;
+  background: linear-gradient(to right, #3F1D38, #FFD6A5,#3F1D38,#AF5279, #3F1D38,#FFD6A5);
+  padding: 20px 0 0 0;
+  position: relative;
+  color: #FFD6A5;
+  overflow-x: hidden;
+}
+
+.home-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------------- NAVBAR --------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(63, 29, 56, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  position: sticky;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1150px;
+  margin: 10px auto auto 50%;
+  z-index: 100;
+}
+
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  padding: 3px;
+  color: #FFD6A5;
+  font-weight: 600;
+}
+
+.navbar-links {
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+}
+
+.link {
+  margin-left: 35px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #FFD6A5;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  border-bottom: 2px solid #AF5279;
+  transform: scale(1.05);
+  color: #AF5279;
+}
+
+/* ------------------- HERO SECTION --------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 100px;
+  gap: 40px;
+  text-align: center;
+  
+}
+
+.hero-text {
+  max-width: 550px;
+  flex: 1;
+  order: 2;
+}
+
+.hero-img {
+  
+  order: 1;
+}
+
+.hero-img img{
+  border-radius: 50%;
+}
+
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 55px;
+  color: #FFD6A5;
+}
+
+.highlight,.text {
+  background: #3F1D38;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight1 {
+  background: #AF5279;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role {
+  margin-top: 10px;
+  font-size: 34px;
+  background: #FFD6A5;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text {
+  color: rgba(255,214,165,0.85);
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 25px;
+  max-width: 400px;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn,
+.btn-outline {
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: none;
+}
+
+.btn {
+  margin-left:6px;
+  background-color: rgba(63,29,56,0.85);
+  color: #FFD6A5;
+}
+
+.btn:hover {
+  background: transparent;
+  border: 2px solid #AF5279;
+  color: #AF5279;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid rgba(63,29,56,0.85);
+  color: #FFD6A5;
+}
+
+.btn-outline:hover {
+  background: rgba(63,29,56,0.85);
+  border: 2px solid #AF5279;
+  color: #FFD6A5;
+}
+
+.btn a, .btn-outline a {
+  text-decoration:none;
+  color: inherit;
+}
+
+/* ------------------- HERO IMAGES --------------------- */
+.hero-img,
+.hero-img2 {
+  width: 320px;
+  height: 320px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 4px solid rgba(255,214,165,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 40px rgba(255,214,165,0.2);
+  flex-shrink: 0;
+}
+
+.hero-img2 {
+  margin-left: 20px;
+  width: auto;
+}
+
+.hero-img img,
+.hero-img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------- ABOUT / BIO SECTION --------------------- */
+.about-us {
+  padding: 80px 100px;
+  background: linear-gradient(200deg, rgba(63,29,56,0.8), rgba(175,82,121,0.8), rgba(255,214,165,0.6));
+  color: rgba(255,214,165,0.95);
+  text-shadow: 0 1px 3px rgba(58, 58, 58, 0.3);
+  font-size: 16px;
+  line-height: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  text-align: justify;
+}
+
+.about-us:hover {
+  box-shadow: 0px 0px 20px rgba(63,29,56,0.6);
+}
+
+.about-us h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #AF5279;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Rotating Typing Text */
+.rotating-text {
+  font-size: 30px;
+  color: rgba(255,214,165,0.85);
+  font-weight: 700;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.rotating-text .text {
+  border-right: 3px solid rgba(255,214,165,0.85);
+  padding-right: 5px;
+  white-space: nowrap;
+ 
+}
+
+.typing {
+  animation: typing 1.5s steps(500), blink 3s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0% { border-color: #AF5279; }
+  50% {border-color: #866a9c;}
+  100% {border-color: #FFD6A5;}
+
+}
+
+/* ------------------- PROJECTS --------------------- */
+.projects {
+  margin: 30px auto;
+  padding: 40px 30px;
+  text-align: center;
+  border-top: 2px solid rgba(63,29,56,0.6);
+  border-bottom: 2px solid rgba(63,29,56,0.6);
+  border-radius: 12px;
+  background: rgba(63,29,56,0.15);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+}
+
+.projects p {
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 25px;
+  color: rgba(255,214,165,0.9);
+}
+
+.projects .btn {
+  background-color: rgba(63,29,56,0.85);
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-size: 17px;
+  color: #FFD6A5;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: 0.25s ease-in-out;
+  display: inline-block;
+}
+
+.projects .btn:hover {
+  transform: scale(1.08);
+  background: rgba(175,82,121,0.85);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+.line {
+  border: 2px solid #866a9c;
+  margin: 5px 0;
+}
+/* ---------------------- PHOTO GALLERY ---------------------- */
+.others {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.photo-title {
+  border-bottom: 2px solid rgba(63,29,56,0.6);
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: rgba(255,214,165,0.9);
+}
+
+.photo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.photos {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px;
+  border-radius: 12px;
+  scroll-behavior: smooth;
+  background: rgba(63,29,56,0.15);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  scroll-snap-type: x mandatory;
+}
+
+.photos::-webkit-scrollbar {
+  height: 8px;
+}
+
+.photos::-webkit-scrollbar-track {
+  background: rgba(255,214,165,0.1);
+  border-radius: 10px;
+}
+
+.photos::-webkit-scrollbar-thumb {
+  background: rgba(175,82,121,0.6);
+  border-radius: 10px;
+}
+
+.photos::-webkit-scrollbar-thumb:hover {
+  background: rgba(175,82,121,0.85);
+}
+
+.photos img {
+  min-width: 300px;
+  max-width: 400px;
+  scroll-snap-align: center;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid rgba(255,214,165,0.3);
+  box-shadow: 0 0 25px rgba(255,214,165,0.2);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.photos img:hover {
+  transform: scale(1.07);
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(63,29,56,0.4);
+  backdrop-filter: blur(3px);
+  color: #FFD6A5;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s;
+  z-index: 10;
+}
+
+.scroll-btn:hover {
+  background: rgba(63,29,56,0.65);
+  transform: scale(1.1);
+}
+
+.scroll-btn.left {
+  left: -25px;
+}
+
+.scroll-btn.right {
+  right: -25px;
+}
+
+/* ------------------ FOOTER ------------------ */
+.footer {
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: rgba(63,29,56,0.6);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(255,214,165,0.3);
+  border-radius: 14px 14px 0 0;
+  text-align: center;
+  color: rgba(255,214,165,0.9);
+}
+
+.footer-title {
+  font-size: 60px;
+  font-weight: 800;
+  color: #AF5279;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: rgba(255,214,165,0.85);
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.footer-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: rgba(255,214,165,0.9);
+  font-size: 17px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.footer-link:hover {
+  color: #FFD6A5;
+  border-bottom: 2px solid #AF5279;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  margin-top: 10px;
+  color: rgba(255,214,165,0.7);
+}
+
+.footer-contact {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(63,29,56,0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(63,29,56,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-input,
+.footer-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #AF5279;
+  background-color: rgba(63,29,56,0.85);
+  color: #FFD6A5;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  outline: none;
+  resize: vertical;
+}
+
+.footer-input::placeholder,
+.footer-textarea::placeholder {
+  color: rgba(255,214,165,0.7);
+}
+
+.footer-input:focus,
+.footer-textarea:focus {
+  border-color: #FFD6A5;
+  background-color: rgba(63,29,56,0.95);
+  box-shadow: 0 0 8px #FFD6A5;
+  color: #FFF;
+}
+
+.footer-btn {
+  background-color: rgba(63,29,56,0.85);
+  color: #FFD6A5;
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer-btn:hover {
+  background-color: #af5279d9;
+  transform: scale(1.05);
+}
+
+/* ---------------- VS CODE TEXT BLOCK ---------------- */
+.code-block {
+  font-family: "Consolas", "Courier New", monospace;
+  background: linear-gradient(to right, #3F1D38, #AF5279, #FFD6A5);
+  color: #FFD6A5;
+  padding: 22px;
+  border-radius: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  border: 1px solid #AF5279;
+  font-size: 18px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 105px rgba(63,29,56,0.45);
+  margin-top: 20px;
+  word-wrap: break-word;
+}
+
+.code-block:hover {
+  box-shadow: 0 0 108px rgba(175,82,121,0.45);
+  transform: scale(1.001);
+  transition: 0.2s ease-in-out;
+}
+
+
+/* ------------------- RESPONSIVE DESIGN --------------------- */
+
+
+
+/* Large tablets and smaller laptops (max-width: 1280px) */
+@media (max-width: 1280px) {
+  .hero {
+    padding: 120px 80px;
+  }
+
+  .about-us {
+    padding: 70px 60px;
+  }
+  .navbar{
+    position: sticky;
+  }
+}
+
+/* Tablets and smaller laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 60px;
+  }
+
+  .about-us {
+    padding: 60px 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .role {
+    font-size: 28px;
+  }
+
+  .hero-img,
+  .hero-img2 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .navbar {
+    width: 92%;
+  }
+
+  .photos img {
+    min-width: 250px;
+    max-width: 350px;
+    height: 350px;
+  }
+}
+
+/* iPad Pro (1024px) and iPad Air (820px) - Landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero {
+    flex-direction: row;
+    padding: 80px 50px;
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+
+  .hero-img {
+    margin-top: 0;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    position: sticky;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .navbar-links {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .link {
+    margin-left: 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 80px 40px;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .role {
+    font-size: 26px;
+    justify-content: center;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-img {
+    margin-top: 30px;
+  }
+
+  .about-us {
+    padding: 50px 30px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .hero-img2 {
+    margin-left: 0;
+    margin-bottom: 20px;
+    width: 280px;
+    height: 280px;
+  }
+
+  .code-block {
+    max-width: 100%;
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .footer-title {
+    font-size: 40px;
+  }
+
+  .scroll-btn {
+    height: 45px;
+    width: 45px;
+    font-size: 24px;
+  }
+
+  .scroll-btn.left {
+    left: 5px;
+  }
+
+  .scroll-btn.right {
+    right: 5px;
+  }
+
+  .photos {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .photos img {
+    min-width: 220px;
+    max-width: 280px;
+    height: 300px;
+  }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    top: 10px;
+    width: 95%;
+    padding: 12px 15px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar-logo-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-title {
+    font-size: 18px;
+  }
+
+  .navbar-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar-links {
+    margin-left: 0;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .link a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .role {
+    font-size: 22px;
+    height: 35px;
+  }
+
+  .intro-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btn,
+  .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 20px;
+  }
+
+  .hero-img,
+  .hero-img2 {
+    width: 240px;
+    height: 240px;
+  }
+
+  .about-us {
+    padding: 40px 20px;
+    text-align: left;
+  }
+
+  .about-us h2 {
+    font-size: 26px;
+  }
+
+  .code-block {
+    font-size: 14px;
+    padding: 16px;
+  }
+
+  .projects {
+    padding: 30px 20px;
+  }
+
+  .projects p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .photo-title {
+    font-size: 24px;
+  }
+
+  .photos {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .photos img {
+    min-width: 200px;
+    max-width: 250px;
+    height: 250px;
+  }
+
+  .scroll-btn {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+  }
+
+  .scroll-btn.left {
+    left: 5px;
+  }
+
+  .scroll-btn.right {
+    right: 5px;
+  }
+
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-title {
+    font-size: 32px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+
+  .footer-link {
+    font-size: 15px;
+  }
+
+  .footer-contact {
+    padding: 15px;
+  }
+
+  .footer-input,
+  .footer-textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .footer-btn {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
+
+/* iPhone 14 Pro Max (430px), iPhone XR (414px), iPhone 12 Pro (390px) */
+@media (max-width: 430px) {
+  .hero-text h1 {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .role {
+    font-size: 21px;
+  }
+
+  .hero-img,
+  .hero-img2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .photos img {
+    min-width: 180px;
+    max-width: 220px;
+  }
+}
+
+/* Pixel 7 (412px), Samsung Galaxy S8+ (360px) */
+@media (max-width: 414px) {
+  .hero {
+    padding: 55px 18px;
+  }
+
+  .navbar {
+    width: 96%;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+/* LG Optimus L70 (384px), Moto G4 (360px), Nexus 10 (800px tablet) */
+@media (max-width: 390px) {
+  .hero-text h1 {
+    font-size: 25px;
+    line-height: 33px;
+  }
+
+  .role {
+    font-size: 20px;
+  }
+
+  .hero-img,
+  .hero-img2 {
+    width: 230px;
+    height: 230px;
+  }
+
+  .about-us h2 {
+    font-size: 24px;
+  }
+
+  .code-block {
+    font-size: 13px;
+    padding: 14px;
+  }
+
+  .photos img {
+    min-width: 170px;
+    max-width: 200px;
+    height: 220px;
+  }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .hero-text h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .role {
+    font-size: 19px;
+  }
+
+  .hero-img,
+  .hero-img2 {
+    width: 210px;
+    height: 210px;
+  }
+
+  .navbar-title {
+    font-size: 16px;
+  }
+
+  .link a {
+    font-size: 12px;
+  }
+
+  .intro-text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .about-us {
+    padding: 35px 16px;
+  }
+
+  .footer-title {
+    font-size: 28px;
+  }
+
+  .photos img {
+    min-width: 160px;
+    max-width: 180px;
+    height: 200px;
+  }
+}
+
+/* iPhone SE (375px) */
+@media (max-width: 375px) {
+  .hero {
+    padding: 50px 16px;
+  }
+
+  .btn,
+  .btn-outline {
+    padding: 11px 18px;
+    font-size: 15px;
+  }
+}
+
+/* BlackBerry Z30 (360px), Galaxy Z Fold 5 (unfolded: 884px, folded: 344px) */
+@media (max-width: 344px) {
+  .hero-text h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .role {
+    font-size: 18px;
+  }
+
+  .navbar {
+    width: 97%;
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    width: 26px;
+    height: 26px;
+  }
+
+  .navbar-title {
+    font-size: 15px;
+  }
+
+  .hero-img,
+  .hero-img2 {
+    width: 190px;
+    height: 190px;
+  }
+
+  .code-block {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .footer-title {
+    font-size: 26px;
+  }
+
+  .photos img {
+    min-width: 150px;
+    max-width: 170px;
+    height: 180px;
+  }
+}
+
+/* Surface Duo (540px dual screen) - Landscape mode */
+@media (min-width: 540px) and (max-width: 720px) and (orientation: landscape) {
+  .hero {
+    flex-direction: row;
+    padding: 60px 40px;
+  }
+
+  .hero-text {
+    max-width: 55%;
+  }
+
+  .hero-img {
+    margin-top: 0;
+  }
+
+  .navbar {
+    flex-direction: row;
+  }
+
+  .navbar-links {
+    margin-left: auto;
+  }
+}
+
+/* Galaxy Z Fold 5 (unfolded: 884px) */
+@media (min-width: 800px) and (max-width: 900px) {
+  .hero {
+    padding: 90px 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+}
+
+/* Pixel 7, Moto G4, Nexus 10 - Portrait specific adjustments */
+@media (max-width: 412px) and (orientation: portrait) {
+  .about-us {
+    padding: 38px 22px;
+  }
+
+  .projects {
+    padding: 28px 18px;
+  }
+
+  .footer-contact {
+    padding: 14px;
+  }
+}
