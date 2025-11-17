@@ -13,7 +13,7 @@ body.warm-theme {
 .Home {
   width: 100%;
   min-height: 110vh;
-  background: linear-gradient(to right, #3F1D38, #FFD6A5,#3F1D38,#AF5279, #3F1D38,#FFD6A5);
+  background: linear-gradient(87deg, #3F1D38,#3F1D38,#AF5279,#FFD6A5);
   padding: 20px 0 0 0;
   position: relative;
   color: #FFD6A5;
