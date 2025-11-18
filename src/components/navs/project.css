@@ -83,3 +83,11 @@
   background: #8A143A;
   transform: translateY(-2px);
 }
+
+.thank-you {
+  margin-top: 40px;
+  font-size: 30px;
+  color: #f4ae59;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}

@@ -52,7 +52,9 @@ function Projects() {
           </p>
           <button className="btn"><a href="notfound" target="_blank" rel="noopener noreferrer">View Project</a></button>
         </div>
+         <div className="thank-you">Thank You for Visiting My Portfolio!</div>
       </div>
+     
     </section>
   );
 }
