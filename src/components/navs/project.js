@@ -1,6 +1,7 @@
 import "./project.css";
 import project1 from './project1.png';
 import comingsoon from './coming-soon.png';
+import notfound from '../../page-not-found.js';
 
 function Projects() {
  
@@ -33,7 +34,7 @@ function Projects() {
           <p>
             I am working on more exciting projects! Stay tuned for updates.
           </p>
-          <button className="btn"><a href="notfound" target="_blank" rel="noopener noreferrer">View Project</a></button>
+          <button className="btn"><a href="../../notfound" target="_blank" rel="noopener noreferrer">View Project</a></button>
         </div>
           <div className="project-item">
              <img src={comingsoon} alt="Project 3" />

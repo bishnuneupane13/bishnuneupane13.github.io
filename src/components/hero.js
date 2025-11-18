@@ -1,4 +1,5 @@
 import profile from '../profile.png';
+import { Link } from 'react-router-dom';
 
 
 function Hero() {
@@ -46,7 +47,7 @@ function Hero() {
     </p>
 
     <div className="hero-buttons">
-      <button className="btn"><a href='/projects'>View Work</a></button>
+      <button className="btn"><Link to='/projects'>View Work</Link></button>
       <button className="btn-outline"><a href='#contact'>Contact Me</a></button>
     </div>
   </div>
