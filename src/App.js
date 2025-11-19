@@ -10,8 +10,7 @@ import Skills from './components/navs/skills.js';
 import Footer from './components/footer.js';
 import Nav from './components/navbar.js';
 import Maps from './components/maps.js'
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
+import { Privacy, Terms } from './pages';
 
 import './App.css';
 import Photos from "./components/photos.js";

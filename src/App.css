@@ -516,6 +516,86 @@ body{
   border-bottom: 2px solid #AF5279;
 }
 
+/* Policy links row (Privacy / Terms) */
+.Rules {
+  margin-top: 12px;
+  display: inline-flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: rgba(175,82,121,0.06);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(175,82,121,0.08);
+}
+
+.Rules .footer-link {
+  font-size: 14px;
+  color: rgba(255,214,165,0.95);
+  padding: 6px 10px;
+  border-bottom: none;
+  transition: color 0.18s ease, transform 0.12s ease;
+  display: inline-block;
+}
+
+.Rules .footer-link:hover {
+  color: #FFF;
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, rgba(175,82,121,0.14), rgba(63,29,56,0.06));
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.Rules .footer-link + .footer-link {
+  margin-left: 6px;
+}
+
+@media (max-width: 480px) {
+  .Rules {
+    padding: 5px 8px;
+  }
+  .Rules .footer-link {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
+
+/* Policy page styling (Terms / Privacy) */
+.policy-page {
+  padding: 56px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: rgba(0,0,0,0.92);
+}
+
+.policy-page h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: rgba(0,0,0,0.88);
+}
+
+.policy-subhead {
+  margin-top: 36px;
+  font-size: 22px;
+  color: rgba(0,0,0,0.75);
+}
+
+.policy-list {
+  line-height: 2.0;
+  margin-top: 14px;
+  font-size: 20px;
+  color: rgba(0,0,0,0.85);
+  padding-left: 22px;
+}
+
+@media (max-width: 900px) {
+  .policy-page h1 { font-size: 44px; }
+  .policy-list { font-size: 18px; }
+}
+
+
 .footer-bottom {
   font-size: 14px;
   margin-top: 10px;

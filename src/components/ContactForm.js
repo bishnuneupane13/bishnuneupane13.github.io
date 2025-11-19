@@ -1,21 +1,24 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function ContactForm() {
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
     const formData = new FormData(event.target);
     formData.append("access_key", "fd814e35-913d-4422-8cb7-1413779fa963");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData
+        body: formData,
       });
 
       const data = await response.json();
-      setResult(data.success ? "Success!<br>Thank you for reaching out." : "Error");
+      setResult(
+        data.success ? "Success!<br>Thank you for reaching out." : "Error"
+      );
       if (data.success) event.target.reset();
     } catch (err) {
       console.error(err);
@@ -26,18 +29,48 @@ export default function ContactForm() {
   return (
     <form className="footer-contact" onSubmit={onSubmit}>
       <p className="footer-contact-item">
-        <input type="text" name="name" placeholder="Your Name" className="footer-input" required />
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          className="footer-input"
+          required
+        />
       </p>
       <p className="footer-contact-item">
-        <input type="email" name="email" placeholder="Your Email" className="footer-input" required />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          className="footer-input"
+          required
+        />
       </p>
       <p className="footer-contact-item">
-        <textarea name="message" placeholder="Your Message" className="footer-textarea" required></textarea>
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          className="footer-textarea"
+          required
+        ></textarea>
       </p>
+
       <p>
-        <button type="submit" style={{height: "40px" , padding: "0 20px"}} className="btn footer-btn"> Submit😊  </button>
+        <button
+          type="submit"
+          style={{ height: "40px", padding: "0 20px" }}
+          className="btn footer-btn"
+        >
+          Submit😊
+        </button>
       </p>
-      {result && <p className="footer-result" dangerouslySetInnerHTML={{ __html: result }}></p>}
+
+      {result && (
+        <p
+          className="footer-result"
+          dangerouslySetInnerHTML={{ __html: result }}
+        ></p>
+      )}
     </form>
   );
 }

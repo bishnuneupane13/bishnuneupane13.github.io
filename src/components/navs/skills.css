@@ -14,6 +14,8 @@
 }
 
 .skill-item {
+  display: flex;
+  flex-wrap: wrap;
   flex: 1 1 200px;
   margin: 10px;
   padding: 20px;
@@ -91,4 +93,49 @@
   color: #ffe4b5; 
   box-shadow: 0 0 20px rgba(245, 228, 237, 0.5); 
   border-radius: 8px;
+}
+
+/* Layout & overflow fixes for small screens */
+.skills-section,
+.skills-list,
+.skill-item {
+  box-sizing: border-box;
+}
+
+.skills-section {
+  overflow-x: hidden; 
+}
+
+.skills-list {
+  gap: 12px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.skill-item {
+  min-width: 0; /* allows flex items to shrink properly on narrow screens */
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 30px 12px;
+    margin: 12px;
+  }
+
+  .skill-item {
+    flex: 1 1 100%;
+    padding: 14px;
+    margin: 8px 0;
+  }
+
+  .skill-item h1,
+  .skills-section h2 {
+    font-size: 28px;
+  }
+
+  .skill-item p,
+  .skills-section p {
+    font-size: 16px;
+  }
 }
