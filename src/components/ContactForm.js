@@ -15,7 +15,7 @@ export default function ContactForm() {
       });
 
       const data = await response.json();
-      setResult(data.success ? "Success!" : "Error");
+      setResult(data.success ? "Success!<br>Thank you for reaching out." : "Error");
       if (data.success) event.target.reset();
     } catch (err) {
       console.error(err);
@@ -35,9 +35,9 @@ export default function ContactForm() {
         <textarea name="message" placeholder="Your Message" className="footer-textarea" required></textarea>
       </p>
       <p>
-        <button type="submit" className="btn footer-btn">Submit</button>
+        <button type="submit" style={{height: "40px" , padding: "0 20px"}} className="btn footer-btn"> Submit😊  </button>
       </p>
-      {result && <p className="footer-result">{result}</p>}
+      {result && <p className="footer-result" dangerouslySetInnerHTML={{ __html: result }}></p>}
     </form>
   );
 }
