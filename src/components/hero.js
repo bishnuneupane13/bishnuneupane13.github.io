@@ -17,14 +17,12 @@ function Hero() {
   const [views, setViews] = useState('...');
 
   useEffect(() => {
-    // Determine a unique key. Using domain/username is best.
-    const namespace = 'bishnuneupane13.github.io';
-    const key = 'visits';
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`, { cache: 'no-store' })
+    // Using counterapi.dev as countapi.xyz is unstable
+    fetch('https://api.counterapi.dev/v1/bishnuneupane13/portfolio/up')
       .then(res => res.json())
       .then(data => {
         console.log('View count response:', data);
-        setViews(data.value);
+        setViews(data.count);
       })
       .catch(err => {
         console.error('Error fetching view count:', err);
