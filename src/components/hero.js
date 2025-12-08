@@ -20,9 +20,12 @@ function Hero() {
     // Determine a unique key. Using domain/username is best.
     const namespace = 'bishnuneupane13.github.io';
     const key = 'visits';
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`, { cache: 'no-store' })
       .then(res => res.json())
-      .then(data => setViews(data.value))
+      .then(data => {
+        console.log('View count response:', data);
+        setViews(data.value);
+      })
       .catch(err => {
         console.error('Error fetching view count:', err);
         setViews('N/A');
