@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import cv from './bishnu-neupane-cv.pdf';
 
+
 function Hero() {
   const roles = [
     "Frontend Web Developer",
@@ -26,7 +27,7 @@ function Hero() {
       })
       .catch(err => {
         console.error('Error fetching view count:', err);
-        setViews('N/A');
+        setViews('999');
       });
   }, []);
 
@@ -53,7 +54,7 @@ function Hero() {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setDelta(200);
+      setDelta(1500);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setRoleIndex(roleIndex + 1);
@@ -79,7 +80,7 @@ function Hero() {
 
           <div className="hero-text">
             <p className="hero-greeting">Hello, I'm</p>
-            <h1 className="hero-name">Bishnu Neupane</h1>
+            <h1 className="hero-name" style={{ color: "#fff", textDecoration: "dashed" }}>Bishnu Neupane</h1>
 
             <h2 className="role rotating-text">
               <span className="text">{text}</span>
