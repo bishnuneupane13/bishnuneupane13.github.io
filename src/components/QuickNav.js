@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 function QuickNav() {
     return (
@@ -15,6 +15,10 @@ function QuickNav() {
                 <i className="fa-brands fa-linkedin"></i>
                 <span>LinkedIn</span>
             </a>
+            <Link to="/gallary" className="quick-nav-item">
+                <i className="fa-solid fa-images"></i>
+                <span>Gallery</span>
+            </Link>
             <NavLink exact to="/reviews" className="quick-nav-item" activeClassName="active">
                 <i className="fa-solid fa-star"></i>
                 <span>Reviews</span>

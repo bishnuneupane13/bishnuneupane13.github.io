@@ -65,10 +65,6 @@ function GalleryPage() {
           </div>
           <Photos />
         </div>
-        {/* Reviews column */}
-        <div className="reviews-section-wrapper" style={{ flex: 1 }}>
-          <Reviews />
-        </div>
       </div>
       <Footer />
     </>
@@ -96,7 +92,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<Pro />} />
           <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/gallary" element={<GalleryPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
