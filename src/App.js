@@ -13,6 +13,7 @@ import Contact from './components/Contact.js';
 import { Privacy, Terms } from './pages';
 import './App.css';
 import Photos from "./components/photos.js";
+import Reviews from "./components/reviews.js";
 import NotFound from "./page-not-found.js";
 
 function ScrollToHash() {
@@ -35,6 +36,7 @@ function HomePage() {
       <QuickNav />
       <section id="home"><Hero /></section>
       <section id="about"><About /></section>
+
       <Footer />
     </>
   );
@@ -54,11 +56,20 @@ function SkillsPage() {
 function GalleryPage() {
   return (
     <>
-      <div className="gallery-page">
-        <h1 className="gallery-title">Photo Gallery</h1>
-        <p className="gallery-desc">A collection of photos and memories from my journey.</p>
+      <div className="gallery-reviews-wrapper" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start' }}>
+        {/* Gallery column */}
+        <div className="gallery-section" style={{ flex: 1 }}>
+          <div className="gallery-page">
+            <h1 className="gallery-title">Photo Gallery</h1>
+            <p className="gallery-desc">A collection of photos and memories from my journey.</p>
+          </div>
+          <Photos />
+        </div>
+        {/* Reviews column */}
+        <div className="reviews-section-wrapper" style={{ flex: 1 }}>
+          <Reviews />
+        </div>
       </div>
-      <Photos />
       <Footer />
     </>
   );
@@ -89,6 +100,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/reviews" element={<Reviews />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
