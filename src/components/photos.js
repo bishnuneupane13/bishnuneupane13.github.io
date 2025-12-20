@@ -5,6 +5,8 @@ import image4 from '../image4.jpg';
 import image5 from '../image5.jpg';
 import logo from '../logo.png';
 import pic from '../pic.png';
+import image6 from '../image6.jpg';
+import image7 from '../image7.jpg';
 import profile from '../profile.png';
 
 function Photos() {
@@ -21,6 +23,8 @@ function Photos() {
         <img src={image1} alt="img6" />
         <img src={profile} alt="img7" />
         <img src={image5} alt="img8" />
+        <img src={image6} alt="img9" />
+        <img src={image7} alt="img10" />
       </div>
     </div>
   );
