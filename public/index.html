@@ -58,7 +58,15 @@
 <body>
 
   <div id="root"></div>
+  <!-- Add this to your index.html inside <head> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js" defer></script>
+  <script>
+    snowStorm.flakesMax = 1000; // number of snowflakes
+    snowStorm.flakesMaxActive = 50; // max visible at once
+    snowStorm.animationInterval = 20; // speed
+  </script>
 
+  <script src="https://app.embed.im/sparkles.js" defer></script>
 </body>
 
 </html>
