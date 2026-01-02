@@ -15,16 +15,16 @@ function Photos() {
       <h2>Photo Gallery</h2>
 
       <div className="photo-list">
-        <img src={image3} alt="img1" />
-        <img src={logo} alt="img2" />
-        <img src={image4} alt="img3" />
-        <img src={pic} alt="img4" />
-        <img src={image2} alt="img5" />
-        <img src={image1} alt="img6" />
-        <img src={profile} alt="img7" />
-        <img src={image5} alt="img8" />
-        <img src={image6} alt="img9" />
-        <img src={image7} alt="img10" />
+        <img src={image3} alt="Bishnu Neupane - Personal Photo 1" />
+        <img src={logo} alt="Bishnu Neupane - Official Logo" />
+        <img src={image4} alt="Bishnu Neupane - Personal Photo 2" />
+        <img src={pic} alt="Bishnu Neupane - Profile Illustration" />
+        <img src={image2} alt="Bishnu Neupane - Personal Photo 3" />
+        <img src={image1} alt="Bishnu Neupane - Personal Photo 4" />
+        <img src={profile} alt="Bishnu Neupane - Professional Profile" />
+        <img src={image5} alt="Bishnu Neupane - Personal Photo 5" />
+        <img src={image6} alt="Bishnu Neupane - Personal Photo 6" />
+        <img src={image7} alt="Bishnu Neupane - Personal Photo 7" />
       </div>
     </div>
   );

@@ -70,7 +70,7 @@ function Hero() {
         <div className="hero-content">
           <div className="hero-profile-wrapper">
             <div className="hero-img">
-              <img src={profile} alt="Profile" />
+              <img src={profile} alt="Bishnu Neupane - Frontend Developer & Cybersecurity Enthusiast" />
             </div>
             <div className="view-count">
               <i className="fa-solid fa-eye"></i>
