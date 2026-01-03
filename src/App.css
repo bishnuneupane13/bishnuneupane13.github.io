@@ -165,6 +165,65 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
+.view-count {
+  position: absolute;
+  top: 0;
+  right: -10px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 10px;
+  border-radius: 38px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+
+}
+
+.view-count:hover {
+  opacity: 0;
+}
+
+.view-count span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.8);
+
+}
+
+.view-count i {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 900px) {
+  .view-count {
+    right: -5px;
+    top: -5px;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .view-count {
+    right: 0;
+    top: -5px;
+  }
+}
+
+
+
+
+.hero-profile-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .hero-img img {
   width: 100%;
   height: 100%;
@@ -472,6 +531,65 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 25px;
+}
+
+/* About Header Premium Style */
+.about-header {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-header:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Background Glow for About Header */
+.about-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(147, 51, 234, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-header h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+
+.about-header p {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
 }
 
 /* About Grid Layout */
@@ -1411,51 +1529,6 @@ body {
   order: 0;
 }
 
-.view-count {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  padding: 11px 24px;
-  border-radius: 999px;
-
-  border: 1px solid rgba(255, 255, 255, 0.6);
-
-  color: #222;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  font-weight: 600;
-
-  box-shadow:
-    8px 8px 18px rgba(0, 0, 0, 0.12),
-    -8px -8px 18px rgba(255, 255, 255, 0.9),
-    inset 1px 1px 0 rgba(255, 255, 255, 0.6);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-}
-
-.view-count:hover {
-  background: rgba(255, 255, 255, 0.95);
-
-  transform: translateY(-2px) scale(1.03);
-
-  box-shadow:
-    12px 12px 28px rgba(0, 0, 0, 0.18),
-    -10px -10px 24px rgba(255, 255, 255, 1),
-    inset 1px 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-.view-count i {
-  font-size: 15px;
-  opacity: 0.75;
-}
 
 /* ==================== PROFILE CARD INTEGRATION ==================== */
 .hero-profile-card-wrapper {

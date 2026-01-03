@@ -11,6 +11,7 @@ import Nav from './components/navbar.js';
 import QuickNav from './components/QuickNav.js';
 import Contact from './components/Contact.js';
 import { Privacy, Terms } from './pages';
+import VideoPlayer from './components/VideoPlayer';
 import ProfileCard from './components/ProfileCard';
 import './App.css';
 import Photos from "./components/photos.js";
@@ -88,7 +89,8 @@ function GalleryPage() {
 
           {/* Profile Card Section with Background */}
           <section style={{
-            width: '90%',
+            width: '100%',
+            maxWidth: '1200px',
             position: 'relative',
             display: 'flex',
             justifyContent: 'center',
@@ -96,7 +98,7 @@ function GalleryPage() {
             overflow: 'hidden',
             borderRadius: '20px',
             border: '1px solid rgba(255, 255, 255, 0.1)',
-            marginLeft: '7rem'
+            margin: '0 auto'
           }}>
             {/* Background Image Layer */}
             <div style={{
@@ -155,6 +157,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <VideoPlayer />
       </div>
     </BrowserRouter>
   );

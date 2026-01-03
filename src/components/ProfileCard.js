@@ -43,7 +43,7 @@ const ProfileCard = ({ name, github, linkedin, role, bio }) => {
                                 <i className="fa-brands fa-linkedin"></i>
                             </a>
                         )}
-                        <a href="mailto:contact@bishnuneupane.com" aria-label="Email">
+                        <a href="mailto:gwbishnu10@gmail.com" aria-label="Email">
                             <i className="fa-solid fa-envelope"></i>
                         </a>
                         <a href="https://bishnuneupane13.github.io" target="_blank" rel="noopener noreferrer" aria-label="Website">

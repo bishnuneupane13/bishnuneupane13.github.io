@@ -3,10 +3,10 @@ function About() {
     <section className="about-us" id="about">
       {/* BIO TEXT (VERY IMPORTANT FOR GOOGLE) */}
       <header className="about-header">
-        <h1>About Bishnu Neupane</h1>
+        <h1>About Me</h1>
         <p>
-          Bishnu Neupane is a frontend developer and cybersecurity enthusiast from
-          Kathmandu, Nepal. He is passionate about building modern web applications,
+          I am a frontend developer and cybersecurity enthusiast from
+          Kathmandu, Nepal. I am passionate about building modern web applications,
           learning security concepts, and exploring new technologies.
         </p>
       </header>

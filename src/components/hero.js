@@ -70,12 +70,14 @@ function Hero() {
         <div className="hero-content">
           <div className="hero-profile-wrapper">
             <div className="hero-img">
+              <div className="view-count">
+                <i className="fa-solid fa-eye" style={{ fontSize: '12px', color: 'white' }}></i>
+                <span style={{ fontSize: '12px', color: 'white' }}>{views}</span>
+              </div>
               <img src={profile} alt="Bishnu Neupane - Frontend Developer & Cybersecurity Enthusiast" />
+
             </div>
-            <div className="view-count">
-              <i className="fa-solid fa-eye"></i>
-              <span>Total Views: {views}</span>
-            </div>
+
           </div>
 
           <div className="hero-text">
