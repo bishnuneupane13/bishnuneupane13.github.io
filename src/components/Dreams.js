@@ -1,4 +1,5 @@
 import './Dreams.css';
+import { useState, useEffect } from 'react';
 
 import bmw1 from '../medias/bmw1.jpg';
 import bmw2 from '../medias/bmw2.jpg';
@@ -11,16 +12,29 @@ import bmwMain from '../medias/bmw.jpg';
 function Dreams() {
 
 
-    const progress = {
-        cpp: false,
-        python: true,
-        golang: false,
-        bugHunting: false,
-        pentesting: false,
-        certs: false,
-        ultimate: false
-    };
+    const [progress, setProgress] = useState(() => {
+        const saved = localStorage.getItem('dreamsProgress');
+        return saved ? JSON.parse(saved) : {
+            cpp: false,
+            python: true,
+            golang: false,
+            bugHunting: false,
+            pentesting: false,
+            certs: false,
+            ultimate: false
+        };
+    });
 
+    useEffect(() => {
+        localStorage.setItem('dreamsProgress', JSON.stringify(progress));
+    }, [progress]);
+
+    const toggleProgress = (key) => {
+        setProgress(prev => ({
+            ...prev,
+            [key]: !prev[key]
+        }));
+    };
 
     const totalItems = Object.keys(progress).length;
     const completedItems = Object.values(progress).filter(Boolean).length;
@@ -69,19 +83,28 @@ function Dreams() {
                                     <i className="fa-solid fa-code"></i> Programming Foundations
                                 </h4>
                                 <div className="progress-items">
-                                    <div className={`progress-item ${progress.cpp ? 'completed' : ''}`}>
+                                    <div
+                                        className={`progress-item ${progress.cpp ? 'completed' : ''}`}
+                                        onClick={() => toggleProgress('cpp')}
+                                    >
                                         <div className="checkbox">
                                             {progress.cpp && <i className="fa-solid fa-check"></i>}
                                         </div>
                                         <span className="item-label">C++ Mastery</span>
                                     </div>
-                                    <div className={`progress-item ${progress.python ? 'completed' : ''}`}>
+                                    <div
+                                        className={`progress-item ${progress.python ? 'completed' : ''}`}
+                                        onClick={() => toggleProgress('python')}
+                                    >
                                         <div className="checkbox">
                                             {progress.python && <i className="fa-solid fa-check"></i>}
                                         </div>
                                         <span className="item-label">Python Mastery</span>
                                     </div>
-                                    <div className={`progress-item ${progress.golang ? 'completed' : ''}`}>
+                                    <div
+                                        className={`progress-item ${progress.golang ? 'completed' : ''}`}
+                                        onClick={() => toggleProgress('golang')}
+                                    >
                                         <div className="checkbox">
                                             {progress.golang && <i className="fa-solid fa-check"></i>}
                                         </div>
@@ -96,25 +119,37 @@ function Dreams() {
                                     <i className="fa-solid fa-shield-halved"></i> Security & Goals
                                 </h4>
                                 <div className="progress-items">
-                                    <div className={`progress-item ${progress.bugHunting ? 'completed' : ''}`}>
+                                    <div
+                                        className={`progress-item ${progress.bugHunting ? 'completed' : ''}`}
+                                        onClick={() => toggleProgress('bugHunting')}
+                                    >
                                         <div className="checkbox">
                                             {progress.bugHunting && <i className="fa-solid fa-check"></i>}
                                         </div>
                                         <span className="item-label">Bug Hunting & Web Security</span>
                                     </div>
-                                    <div className={`progress-item ${progress.pentesting ? 'completed' : ''}`}>
+                                    <div
+                                        className={`progress-item ${progress.pentesting ? 'completed' : ''}`}
+                                        onClick={() => toggleProgress('pentesting')}
+                                    >
                                         <div className="checkbox">
                                             {progress.pentesting && <i className="fa-solid fa-check"></i>}
                                         </div>
                                         <span className="item-label">Professional Penetration Testing</span>
                                     </div>
-                                    <div className={`progress-item ${progress.certs ? 'completed' : ''}`}>
+                                    <div
+                                        className={`progress-item ${progress.certs ? 'completed' : ''}`}
+                                        onClick={() => toggleProgress('certs')}
+                                    >
                                         <div className="checkbox">
                                             {progress.certs && <i className="fa-solid fa-check"></i>}
                                         </div>
                                         <span className="item-label">OSCP / CEH Certifications</span>
                                     </div>
-                                    <div className={`progress-item ${progress.ultimate ? 'completed' : ''}`}>
+                                    <div
+                                        className={`progress-item ${progress.ultimate ? 'completed' : ''}`}
+                                        onClick={() => toggleProgress('ultimate')}
+                                    >
                                         <div className="checkbox">
                                             {progress.ultimate && <i className="fa-solid fa-check"></i>}
                                         </div>

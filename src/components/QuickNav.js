@@ -15,6 +15,10 @@ function QuickNav() {
                 <i className="fa-brands fa-linkedin"></i>
                 <span>LinkedIn</span>
             </a>
+            <Link to="/dreams" className="quick-nav-item">
+                <i className="fa-solid fa-rocket"></i>
+                <span>Dreams</span>
+            </Link>
             <Link to="/gallary" className="quick-nav-item">
                 <i className="fa-solid fa-images"></i>
                 <span>Gallery</span>
