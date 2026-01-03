@@ -11,12 +11,13 @@ import Nav from './components/navbar.js';
 import QuickNav from './components/QuickNav.js';
 import Contact from './components/Contact.js';
 import { Privacy, Terms } from './pages';
-import VideoPlayer from './components/VideoPlayer';
 import ProfileCard from './components/ProfileCard';
 import './App.css';
 import Photos from "./components/photos.js";
 import Reviews from "./components/reviews.js";
 import NotFound from "./page-not-found.js";
+import Dreams from "./components/Dreams.js";
+import bg from "./medias/bmw1.jpg";
 
 function ScrollToHash() {
   const { hash, pathname } = useLocation();
@@ -49,6 +50,16 @@ function SkillsPage() {
   return (
     <>
       <Skills />
+      <Footer />
+    </>
+  );
+}
+
+
+function DreamsPage() {
+  return (
+    <>
+      <Dreams />
       <Footer />
     </>
   );
@@ -104,7 +115,9 @@ function GalleryPage() {
             <div style={{
               position: 'absolute',
               inset: 0,
-              backgroundImage: `url(${process.env.PUBLIC_URL + '/null_background.png'})`,
+              width: '100%',
+              height: '100%',
+              backgroundImage: `url(${bg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               filter: 'brightness(0.6) contrast(1.2)',
@@ -149,6 +162,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<Pro />} />
           <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/dreams" element={<DreamsPage />} />
           <Route path="/gallary" element={<GalleryPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<Privacy />} />
@@ -157,7 +171,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <VideoPlayer />
+
       </div>
     </BrowserRouter>
   );

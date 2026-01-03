@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProfileCard.css';
-import profileImg from '../medias/profile.png';
+import profileImg from '../medias/image3.jpg';
 
 const ProfileCard = ({ name, github, linkedin, role, bio }) => {
     return (
