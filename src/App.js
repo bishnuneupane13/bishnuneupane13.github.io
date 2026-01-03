@@ -17,7 +17,8 @@ import Photos from "./components/photos.js";
 import Reviews from "./components/reviews.js";
 import NotFound from "./page-not-found.js";
 import Dreams from "./components/Dreams.js";
-import bg from "./medias/bmw1.jpg";
+import bg from "./medias/bmw.jpg";
+
 
 function ScrollToHash() {
   const { hash, pathname } = useLocation();
