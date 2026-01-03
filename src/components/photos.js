@@ -1,13 +1,18 @@
-import image1 from '../image1.jpg';
-import image2 from '../image2.jpg';
-import image3 from '../image3.jpg';
-import image4 from '../image4.jpg';
-import image5 from '../image5.jpg';
-import logo from '../logo.png';
-import pic from '../pic.png';
-import image6 from '../image6.jpg';
-import image7 from '../image7.jpg';
-import profile from '../profile.png';
+import image1 from '../medias/image1.jpg';
+import image2 from '../medias/image2.jpg';
+import image3 from '../medias/image3.jpg';
+import image4 from '../medias/image4.jpg';
+import image5 from '../medias/image5.jpg';
+import image6 from '../medias/image6.jpg';
+import image7 from '../medias/image7.jpg';
+import image8 from '../medias/image8.jpg';
+import image9 from '../medias/image9.jpg';
+
+
+import logo from '../medias/logo.png';
+import pic from '../medias/pic.png';
+import profile from '../medias/profile.png';
+
 
 function Photos() {
   return (
@@ -25,6 +30,8 @@ function Photos() {
         <img src={image5} alt="Bishnu Neupane - Personal Photo 5" />
         <img src={image6} alt="Bishnu Neupane - Personal Photo 6" />
         <img src={image7} alt="Bishnu Neupane - Personal Photo 7" />
+        <img src={image8} alt="Bishnu Neupane - Personal Photo 8" />
+        <img src={image9} alt="Bishnu Neupane - Personal Photo 9" />
       </div>
     </div>
   );

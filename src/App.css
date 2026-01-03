@@ -1456,3 +1456,51 @@ body {
   font-size: 15px;
   opacity: 0.75;
 }
+
+/* ==================== PROFILE CARD INTEGRATION ==================== */
+.hero-profile-card-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.view-count-overlay {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'JetBrains Mono', monospace;
+  z-index: 3;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: float-badge 3s infinite ease-in-out;
+}
+
+@keyframes float-badge {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+}

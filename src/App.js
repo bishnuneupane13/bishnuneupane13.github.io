@@ -11,6 +11,7 @@ import Nav from './components/navbar.js';
 import QuickNav from './components/QuickNav.js';
 import Contact from './components/Contact.js';
 import { Privacy, Terms } from './pages';
+import ProfileCard from './components/ProfileCard';
 import './App.css';
 import Photos from "./components/photos.js";
 import Reviews from "./components/reviews.js";
@@ -56,16 +57,70 @@ function SkillsPage() {
 function GalleryPage() {
   return (
     <>
-      <div className="gallery-reviews-wrapper" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start' }}>
-        {/* Gallery column */}
-        <div className="gallery-section" style={{ flex: 1 }}>
-          <div className="gallery-page">
-            <h1 className="gallery-title">Photo Gallery</h1>
-            <p className="gallery-desc">A collection of photos and memories from my journey.</p>
-          </div>
-          <Photos />
+      <div className="gallery-layout" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '40px',
+        padding: '20px'
+      }}>
+
+
+
+        <Photos />
+
+        <div style={{ width: '100%', marginTop: '40px' }}>
+          <h2 style={{
+            fontSize: '2.5rem',
+            fontWeight: '800',
+            textAlign: 'center',
+            marginBottom: '30px',
+            color: '#fff',
+            fontFamily: "'Inter', sans-serif",
+            textTransform: 'uppercase',
+            letterSpacing: '2px',
+            background: 'linear-gradient(to right, #fff, #94a3b8)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>
+            Profile Card
+          </h2>
+
+          {/* Profile Card Section with Background */}
+          <section style={{
+            width: '90%',
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '60px 20px',
+            overflow: 'hidden',
+            borderRadius: '20px',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            marginLeft: '7rem'
+          }}>
+            {/* Background Image Layer */}
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundImage: `url(${process.env.PUBLIC_URL + '/null_background.png'})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'brightness(0.6) contrast(1.2)',
+              zIndex: 0
+            }}></div>
+
+            {/* Content Layer */}
+            <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
+              <ProfileCard
+                name="Bishnu Neupane"
+                github="https://github.com/bishnuneupane13"
+                linkedin="https://linkedin.com/in/bishnuneupane13"
+              />
+            </div>
+          </section>
         </div>
-      </div>
+
+      </div >
       <Footer />
     </>
   );
@@ -96,6 +151,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/card" element={<ProfileCard />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

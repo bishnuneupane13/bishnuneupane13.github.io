@@ -1,7 +1,7 @@
-import profile from '../profile.png';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import cv from './bishnu-neupane-cv.pdf';
+import profile from '../medias/profile.png';
 
 
 function Hero() {
